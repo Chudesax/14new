@@ -91,56 +91,12 @@ html {
   flex-direction: column;
   height: 100vh;
   max-width: 320px;
+  overflow: auto;
   background: #ffffff;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
 .side-menu__navigation {
   padding-top: 32px;
-}
-.side-menu__list {
-  list-style-type: none;
-  padding-left: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: space-between;
-  row-gap: 32px;
-}
-.side-menu__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  font-weight: 500;
-  padding: 8px;
-  height: 40px;
-  color: #1b1c21;
-}
-.side-menu__item:active, .side-menu__item:focus {
-  color: #7e7e82;
-}
-.side-menu__item:active::before, .side-menu__item:focus::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  height: 32px;
-  width: 4px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  background-color: #41f6d7;
-}
-.side-menu__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  color: inherit;
-  text-decoration: none;
-  font-weight: 500;
 }
 .side-menu__footer {
   padding: 24px 0 0 24px;
@@ -197,6 +153,49 @@ html {
 }
 .side-menu__lang button:active {
   color: #7e7e82;
+}
+
+.navigation__list {
+  list-style-type: none;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 32px;
+}
+.navigation__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  height: 40px;
+}
+.navigation__item:active, .navigation__item:focus {
+  color: #7e7e82;
+}
+.navigation__item:active::before, .navigation__item:focus::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 32px;
+  width: 4px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #41f6d7;
+}
+.navigation__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  color: #1b1c21;
 }
 
 .header {

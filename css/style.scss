@@ -89,12 +89,6 @@ html {
   font-style: normal;
 }
 
-// .container {
-//   display: block;
-//   margin: 0 auto;
-//   max-width: 1120px;
-// }
-
 .pink_round {
   background: rgb(255, 61, 119);
   border-radius: 50%;
@@ -118,6 +112,7 @@ html {
   flex-direction: column;
   height: 100vh;
   max-width: 320px;
+  overflow: auto;
   background: #ffffff;
   box-shadow:
     -2px 0px 4px rgba(69, 79, 126, 0.02),
@@ -125,57 +120,6 @@ html {
 
   &__navigation {
     padding-top: 32px;
-  }
-
-  &__list {
-    list-style-type: none;
-    padding-left: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-    row-gap: 32px;
-  }
-
-  &__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    font-weight: 500;
-    padding: 8px;
-    height: 40px;
-    color: #1b1c21;
-
-    &:active,
-    &:focus {
-      color: #7e7e82;
-
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        height: 32px;
-        width: 4px;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 20px;
-        background-color: #41f6d7;
-      }
-    }
-  }
-
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: inherit;
-    text-decoration: none;
-    font-weight: 500;
   }
 
   &__footer {
@@ -239,6 +183,57 @@ html {
         color: #7e7e82;
       }
     }
+  }
+}
+
+.navigation {
+  &__list {
+    list-style-type: none;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    // justify-content: space-between;
+    row-gap: 32px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    height: 40px;
+
+    &:active,
+    &:focus {
+      color: #7e7e82;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        height: 32px;
+        width: 4px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #41f6d7;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    color: #1b1c21;
   }
 }
 
