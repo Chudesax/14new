@@ -194,7 +194,7 @@ html {
     flex-direction: column;
     align-items: start;
     // justify-content: space-between;
-    row-gap: 32px;
+    row-gap: clamp(10px, 3vh, 32px);
   }
 
   &__item {
