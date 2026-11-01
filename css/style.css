@@ -164,14 +164,14 @@ html {
   display: flex;
   flex-direction: column;
   align-items: start;
-  row-gap: clamp(10px, 3vh, 32px);
+  row-gap: clamp(16px, 4vh, 32px);
 }
 .navigation__item {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px;
-  height: 40px;
+  height: 24px;
 }
 .navigation__item:active, .navigation__item:focus {
   color: #7e7e82;
