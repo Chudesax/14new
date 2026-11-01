@@ -81,7 +81,8 @@ html {
   cursor: pointer;
 }
 .pink_round:active {
-  background-color: rgb(46, 182, 80);
+  transform: scale(1.1);
+  transition: transform 0.1s;
 }
 
 .side-menu {
@@ -153,6 +154,8 @@ html {
 }
 .side-menu__lang button:active {
   color: #7e7e82;
+  transform: scale(1.1);
+  transition: transform 0.3s;
 }
 
 .navigation__list {
@@ -172,6 +175,12 @@ html {
 }
 .navigation__item:active, .navigation__item:focus {
   color: #7e7e82;
+}
+.navigation__item:active a:active,
+.navigation__item:active a:focus, .navigation__item:focus a:active,
+.navigation__item:focus a:focus {
+  transform: scale(1.1);
+  transition: transform 0.1s;
 }
 .navigation__item:active::before, .navigation__item:focus::before {
   content: "";
