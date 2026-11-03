@@ -8,6 +8,7 @@ p,
 ol,
 ul {
   margin: 0;
+  padding: 0;
 }
 
 ol[role=list],
@@ -86,24 +87,26 @@ html {
 }
 
 .side-menu {
+  padding: 18px 24px 32px;
   position: absolute;
   left: 0;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
   max-width: 320px;
   overflow: auto;
   background: #ffffff;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
-.side-menu__navigation {
-  padding-top: 32px;
-}
-.side-menu__footer {
-  padding: 24px 0 0 24px;
+.side-menu__wrapper-top {
   display: flex;
   flex-direction: column;
-  margin-top: auto;
+  row-gap: clamp(24px, 6vh, 46px);
+}
+.side-menu__footer {
+  display: flex;
+  flex-direction: column;
 }
 .side-menu__buttons {
   display: flex;
@@ -139,7 +142,6 @@ html {
   -moz-column-gap: 7px;
        column-gap: 7px;
   padding-top: 40px;
-  padding-bottom: 32px;
 }
 .side-menu__lang button {
   padding: 0;
@@ -160,11 +162,10 @@ html {
 
 .navigation__list {
   list-style-type: none;
-  padding-left: 24px;
   display: flex;
   flex-direction: column;
   align-items: start;
-  row-gap: clamp(16px, 4vh, 32px);
+  row-gap: clamp(16px, 3vh, 32px);
 }
 .navigation__item {
   display: flex;
@@ -173,16 +174,7 @@ html {
   padding: 8px;
   height: 24px;
 }
-.navigation__item:active, .navigation__item:focus {
-  color: #7e7e82;
-}
-.navigation__item:active a:active,
-.navigation__item:active a:focus, .navigation__item:focus a:active,
-.navigation__item:focus a:focus {
-  transform: scale(1.1);
-  transition: transform 0.1s;
-}
-.navigation__item:active::before, .navigation__item:focus::before {
+.navigation__item:hover::before {
   content: "";
   display: block;
   position: absolute;
@@ -192,6 +184,13 @@ html {
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   background-color: #41f6d7;
+}
+.navigation__item:active a:active,
+.navigation__item:active a:focus, .navigation__item:focus a:active,
+.navigation__item:focus a:focus {
+  transform: scale(1.1);
+  transition: transform 0.1s;
+  color: #7e7e82;
 }
 .navigation__link {
   display: flex;
@@ -207,10 +206,6 @@ html {
   color: #1b1c21;
 }
 
-.header {
-  padding: 24px 24px 0;
-  min-height: 88px;
-}
 .header__wrapper {
   display: flex;
   justify-content: space-between;
